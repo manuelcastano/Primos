@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WindowController">
    <children>
       <Label layoutX="175.0" layoutY="67.0" text="Top">
          <font>
@@ -17,14 +18,24 @@
          </font>
       </Label>
       <TextField fx:id="tfTop" layoutX="226.0" layoutY="70.0" />
-      <Button layoutX="250.0" layoutY="115.0" mnemonicParsing="false" onAction="#generateMatrix" onMouseClicked="#generateMatrix" text="Generate matrix" />
-      <GridPane fx:id="gp" layoutX="250.0" layoutY="152.0" prefHeight="96.0" prefWidth="101.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-      </GridPane>
+      <Button layoutX="131.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#generateMatrix1" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 1" textAlignment="CENTER" wrapText="true" />
+      <ScrollPane layoutY="200.0" prefHeight="200.0" prefWidth="600.0">
+         <content>
+            <AnchorPane prefHeight="200.0" prefWidth="585.0">
+               <children>
+                  <GridPane fx:id="gp" cacheShape="false" centerShape="false" depthTest="DISABLE" layoutX="5.0" layoutY="5.0" prefHeight="189.0" prefWidth="572.0" scaleShape="false" snapToPixel="false">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                     </columnConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Button layoutX="253.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#generateMatrix2" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 2" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="375.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#generateMatrix3" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 3" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>
