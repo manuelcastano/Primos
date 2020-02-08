@@ -18,7 +18,7 @@
          </font>
       </Label>
       <TextField fx:id="tfTop" layoutX="226.0" layoutY="70.0" />
-      <Button layoutX="131.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#generateMatrix1" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 1" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="b1" layoutX="131.0" layoutY="107.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 1" textAlignment="CENTER" wrapText="true" />
       <ScrollPane layoutY="200.0" prefHeight="200.0" prefWidth="600.0">
          <content>
             <AnchorPane prefHeight="200.0" prefWidth="585.0">
@@ -35,7 +35,7 @@
             </AnchorPane>
          </content>
       </ScrollPane>
-      <Button layoutX="253.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#generateMatrix2" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 2" textAlignment="CENTER" wrapText="true" />
-      <Button layoutX="375.0" layoutY="107.0" mnemonicParsing="false" onMouseClicked="#generateMatrix3" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 3" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="b2" layoutX="253.0" layoutY="107.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 2" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="b3" layoutX="375.0" layoutY="107.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 3" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>
