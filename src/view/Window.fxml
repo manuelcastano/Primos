@@ -5,12 +5,9 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WindowController">
    <children>
       <Label layoutX="175.0" layoutY="67.0" text="Top">
          <font>
@@ -21,18 +18,7 @@
       <Button fx:id="b1" layoutX="131.0" layoutY="107.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 1" textAlignment="CENTER" wrapText="true" />
       <ScrollPane layoutY="200.0" prefHeight="200.0" prefWidth="600.0">
          <content>
-            <AnchorPane prefHeight="200.0" prefWidth="585.0">
-               <children>
-                  <GridPane fx:id="gp" cacheShape="false" centerShape="false" depthTest="DISABLE" layoutX="5.0" layoutY="5.0" prefHeight="189.0" prefWidth="572.0" scaleShape="false" snapToPixel="false">
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <columnConstraints>
-                        <ColumnConstraints />
-                     </columnConstraints>
-                  </GridPane>
-               </children>
-            </AnchorPane>
+            <AnchorPane fx:id="ap" prefHeight="200.0" prefWidth="585.0" />
          </content>
       </ScrollPane>
       <Button fx:id="b2" layoutX="253.0" layoutY="107.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="95.0" text="Generate matrix using method 2" textAlignment="CENTER" wrapText="true" />
