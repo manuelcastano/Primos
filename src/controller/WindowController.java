@@ -13,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import model.Numbers;
+import threads.ColorThread;
 
 public class WindowController implements Initializable{
 	
@@ -49,23 +50,18 @@ public class WindowController implements Initializable{
 		for (int i = 0; i < number.getMatrix().length; i++) {
 			for (int j = 0; j < number.getMatrix()[0].length && aux <= top; j++) {
 				Label l = new Label("" + aux);
-				l.setLayoutX(i*30);
-				l.setLayoutY(j*30);
+				l.setLayoutX(j*30);
+				l.setLayoutY(i*30);
 				l.setFont(new Font(15));
+				Color color;
 				if(number.getBooleans()[i][j]) {
-					l.setTextFill(Color.GREEN);
+					color = Color.GREEN;
 				} else {
-					l.setTextFill(Color.RED);
+					color = Color.RED;
 				}
 				ap.getChildren().add(l);
-				
-				try {
-					Thread.currentThread().sleep(1000);
-					System.out.println(Thread.currentThread().getName());
-					System.out.println(ap.getChildren().toString());
-				} catch (Exception e) {
-					
-				}
+				Runnable colorThread = new ColorThread(l, aux, color);
+				new Thread(colorThread).start();
 				aux++;
 			}
 		}
