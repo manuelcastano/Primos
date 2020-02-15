@@ -31,6 +31,22 @@ public class Numbers {
 		this.matrix = matrix;
 	}
 	
+	public boolean[][] getBooleans() {
+		return booleans;
+	}
+
+	public void setBooleans(boolean[][] booleans) {
+		this.booleans = booleans;
+	}
+
+	public int getMethod() {
+		return method;
+	}
+
+	public void setMethod(int method) {
+		this.method = method;
+	}
+	
 	public void matrixSize() {
 		double root = Math.sqrt(top);
 		if(root % 1 == 0) {
@@ -78,22 +94,6 @@ public class Numbers {
 	        }
 	    }
 	    return prime;
-	}
-	
-	public boolean[][] getBooleans() {
-		return booleans;
-	}
-
-	public void setBooleans(boolean[][] booleans) {
-		this.booleans = booleans;
-	}
-
-	public int getMethod() {
-		return method;
-	}
-
-	public void setMethod(int method) {
-		this.method = method;
 	}
 
 	public boolean isPrimeNumber3(int n){
